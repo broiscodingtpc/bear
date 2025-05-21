@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import { FaTelegram, FaTwitter } from 'react-icons/fa';
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,15 +21,23 @@ export default function Home() {
             <i className="fas fa-bear"></i>
             <span>$BEARNECESITIES</span>
           </a>
-          <button className="menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <div className="nav-links">
+            <a href="#about" className="hover:text-yellow-400 transition">About</a>
+            <a href="#features" className="hover:text-yellow-400 transition">Features</a>
+            <a href="#tokenomics" className="hover:text-yellow-400 transition">Bearonomics</a>
+            <a href="#roadmap" className="hover:text-yellow-400 transition">Roadmap</a>
+          </div>
+          <div className="social-links-nav">
+            <a href="https://x.com/_bearnecesities" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-2xl hover:text-yellow-400 transition" />
+            </a>
+            <a href="https://t.me/bearnecesities" target="_blank" rel="noopener noreferrer">
+              <FaTelegram className="text-2xl hover:text-yellow-400 transition" />
+            </a>
+          </div>
+          <button className="menu-button md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <i className="fas fa-bars"></i>
           </button>
-          <div className="nav-links">
-            <a href="#about">About</a>
-            <a href="#features">Features</a>
-            <a href="#tokenomics">Tokenomics</a>
-            <a href="#roadmap">Roadmap</a>
-          </div>
         </div>
       </nav>
 
@@ -38,6 +47,14 @@ export default function Home() {
           <a href="#features">Features</a>
           <a href="#tokenomics">Tokenomics</a>
           <a href="#roadmap">Roadmap</a>
+          <div className="mobile-social-links">
+            <a href="https://x.com/_bearnecesities" target="_blank" rel="noopener noreferrer">
+              <FaTwitter className="text-2xl" /> X (Twitter)
+            </a>
+            <a href="https://t.me/bearnecesities" target="_blank" rel="noopener noreferrer">
+              <FaTelegram className="text-2xl" /> Telegram
+            </a>
+          </div>
         </div>
       )}
 
@@ -124,8 +141,24 @@ export default function Home() {
         <footer className="footer">
           <div className="container">
             <div className="social-links">
-              <a href="#"><i className="fab fa-telegram"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
+              <a 
+                href="https://t.me/bearnecesities" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FaTelegram />
+                <span className="social-text">Join our Telegram</span>
+              </a>
+              <a 
+                href="https://x.com/_bearnecesities" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+              >
+                <FaTwitter />
+                <span className="social-text">Follow on X</span>
+              </a>
             </div>
             <p>© 2025 $BEARNECESITIES. All rights reserved. Stay cozy! 🐻</p>
             <p className="quote">"In a world full of noise, be the nap." – $BEARNECESITIES</p>
