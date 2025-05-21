@@ -6,6 +6,11 @@ import { FaTelegram, FaTwitter } from 'react-icons/fa';
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const socialLinks = {
+    x: "https://x.com/bearnecesitie_",
+    telegram: "https://t.me/bearnecesities"
+  };
+
   return (
     <>
       <div className="video-background">
@@ -28,10 +33,10 @@ export default function Home() {
             <a href="#roadmap" className="hover:text-yellow-400 transition">Roadmap</a>
           </div>
           <div className="social-links-nav">
-            <a href="https://x.com/_bearnecesities" target="_blank" rel="noopener noreferrer">
+            <a href={socialLinks.x} target="_blank" rel="noopener noreferrer">
               <FaTwitter className="text-2xl hover:text-yellow-400 transition" />
             </a>
-            <a href="https://t.me/bearnecesities" target="_blank" rel="noopener noreferrer">
+            <a href={socialLinks.telegram} target="_blank" rel="noopener noreferrer">
               <FaTelegram className="text-2xl hover:text-yellow-400 transition" />
             </a>
           </div>
@@ -48,10 +53,10 @@ export default function Home() {
           <a href="#tokenomics">Tokenomics</a>
           <a href="#roadmap">Roadmap</a>
           <div className="mobile-social-links">
-            <a href="https://x.com/_bearnecesities" target="_blank" rel="noopener noreferrer">
+            <a href={socialLinks.x} target="_blank" rel="noopener noreferrer">
               <FaTwitter className="text-2xl" /> X (Twitter)
             </a>
-            <a href="https://t.me/bearnecesities" target="_blank" rel="noopener noreferrer">
+            <a href={socialLinks.telegram} target="_blank" rel="noopener noreferrer">
               <FaTelegram className="text-2xl" /> Telegram
             </a>
           </div>
@@ -142,7 +147,7 @@ export default function Home() {
           <div className="container">
             <div className="social-links">
               <a 
-                href="https://t.me/bearnecesities" 
+                href={socialLinks.telegram}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -151,7 +156,7 @@ export default function Home() {
                 <span className="social-text">Join our Telegram</span>
               </a>
               <a 
-                href="https://x.com/_bearnecesities" 
+                href={socialLinks.x}
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
